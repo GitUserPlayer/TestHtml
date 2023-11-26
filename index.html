@@ -2,11 +2,19 @@
     <head>
        <meta charset="utf-8">
        <script>
+           function generateRandomJwt() {
+               // 這只是一個示例，實際上您應該使用安全的方式生成 JWT
+               var randomUserId = Math.floor(Math.random() * 1000) + 1; // 生成一個隨機用戶ID
+               var jwtToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMjM0NTY3ODkwIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
+               // 替換 JWT 中的用戶 ID（實際應用中應該動態生成）
+               jwtToken = jwtToken.replace("123", randomUserId);
+               return jwtToken;
+           }
+
            function launchApp() {
-             // 修改 URL 觸發深層連結，並附帶 JWT 參數
-               // 在實際應用中，您需要動態生成 JWT，這裡僅是示例
-               var jwtToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMjM0NTY3ODkwIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
-";
+               // 生成隨機的 JWT
+               var jwtToken = generateRandomJwt();
+               // 修改 URL 觸發深層連結，並附帶 JWT 參數
                window.location.href = "unitydl://mylink?scene2&jwt=" + encodeURIComponent(jwtToken);
            }
 
