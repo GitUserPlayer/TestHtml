@@ -3,10 +3,10 @@
        <meta charset="utf-8">
        <script>
            function launchApp() {
-               // 修改 URL 触发深层链接
-               // window.location.href = "unitydl://mylink";
-               // 触发打开场景2
-               window.location.href = "unitydl://mylink?scene2";
+             // 修改 URL 觸發深層連結，並附帶 JWT 參數
+               // 在實際應用中，您需要動態生成 JWT，這裡僅是示例
+               var jwtToken = "your_generated_jwt_token";
+               window.location.href = "unitydl://mylink?scene2&jwt=" + encodeURIComponent(jwtToken);
            }
 
            function launchWithParameter() {
