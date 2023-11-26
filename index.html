@@ -5,7 +5,8 @@
            function launchApp() {
              // 修改 URL 觸發深層連結，並附帶 JWT 參數
                // 在實際應用中，您需要動態生成 JWT，這裡僅是示例
-               var jwtToken = "your_generated_jwt_token";
+               var jwtToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMjM0NTY3ODkwIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+";
                window.location.href = "unitydl://mylink?scene2&jwt=" + encodeURIComponent(jwtToken);
            }
 
