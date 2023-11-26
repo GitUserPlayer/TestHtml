@@ -10,7 +10,9 @@
 
 > 此專案是一份 README 的撰寫範本，主要是方便所有人可以快速撰寫 README，讓大家可以更有方向的去寫出 README。
 
-- [線上觀看連結](https://israynotarray.com/)
+- [線上觀看連結](https://www.youtube.com/shorts/ORxnlWUxLDo)
+-  [線上觀看連結](https://docs.unity3d.com/Manual/deep-linking.html)
+-   [線上觀看連結][(https://www.youtube.com/shorts/ORxnlWUxLDo)](https://docs.unity3d.com/Manual/deep-linking-android.html)
 
 ## 功能
 
