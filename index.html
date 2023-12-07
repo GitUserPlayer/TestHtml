@@ -2,20 +2,9 @@
     <head>
        <meta charset="utf-8">
        <script>
-           function generateRandomJwt() {
-               // 這只是一個示例，實際上您應該使用安全的方式生成 JWT
-               var randomUserId = Math.floor(Math.random() * 1000) + 1; // 生成一個隨機用戶ID
-               var jwtToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMjM0NTY3ODkwIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
-               // 替換 JWT 中的用戶 ID（實際應用中應該動態生成）
-               jwtToken = jwtToken.replace("123", randomUserId);
-               return jwtToken;
-           }
-
-           function launchApp() {
-               // 生成隨機的 JWT
-               var jwtToken = generateRandomJwt();
-               // 修改 URL 觸發深層連結，並附帶 JWT 參數
-               window.location.href = "unitydl://mylink?scene2&jwt=" + encodeURIComponent(jwtToken);
+           function launchApp(difficulty) {
+               // 修改 URL 触发深层链接，带有关卡难度参数
+               window.location.href = "unitydl://mylink?ClotheScene&difficulty=" + encodeURIComponent(difficulty);
            }
 
            function launchWithParameter() {
@@ -26,7 +15,10 @@
     </head>
     <body>
        <h1>My Deep Link Test page</h1>
-       <p><a href="#" onclick="launchApp()">Launch</a></p>
-       <p><a href="#" onclick="launchWithParameter()">Launch with Parameter</a></p>
+       <!-- 传递不同的关卡难度参数 -->
+       <p><a href="#" onclick="launchApp('easy')">Launch (Easy)</a></p>
+       <p><a href="#" onclick="launchApp('medium')">Launch (Medium)</a></p>
+       <p><a href="#" onclick="launchApp('hard')">Launch (Hard)</a></p>
+      // <p><a href="#" onclick="launchWithParameter()">Launch with Parameter</a></p>
     </body>
 </html>
